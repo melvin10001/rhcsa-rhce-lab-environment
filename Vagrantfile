@@ -43,7 +43,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 		# provisioning for labipa
 		node.vm.provision "ansible" do |ansible|
 			ansible.playbook = "provision/labipa.yml"
-            ansible.host_vars = { "labipa" => { "private_ipv4_address" => "172.16.20.2", "private_ipv6_address" => "fd00:cafe::2" }}
+            		ansible.host_vars = { "labipa" => { "private_ipv4_address" => "172.16.20.2", "private_ipv6_address" => "fd00:cafe::2" }}
 		end
 	end
 
